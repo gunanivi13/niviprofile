@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Nivetha G</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="portfolio.css"> -->
+
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+    }
+
+    /* Header with Navbar */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #111;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      color: white;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #222;
+      text-align: center;
+      transition: max-height 0.4s ease;
+      display: flex;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      display: block;
+      font-weight: bold;
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* Desktop view */
+    @media (min-width: 769px) {
+      .nav-links {
+        max-height: none;
+        overflow: visible;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        gap: 20px;
+        justify-content: flex-end;
+      }
+      .nav-toggle {
+        display: none;
+      }
+    }
+
+    /* Mobile view toggle */
+    .nav-links.show {
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">NIVETHA GUNASEKARAN</div>
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#aboutme">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#Projects">My Projects</a>
+        <a href="#certificate">Achievements</a>
+        <a href="#My Creations">My Creations</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Sample Section -->
+  <section id="home" style="padding: 100px 20px; background: #e0f7fa;">
+    <h1 style="text-align: center;">Welcome to My Portfolio</h1>
+    <div class="home-img">
+    <img src="Images/Nivi blue.jpg" height="500px; width: 500px;">
+  </div>
+    <div class="home-content">
+      <h3 style="font-size: 50px; color:red;">Hello, It's Me</h3>
+      <h1 style="color: black; font-size: 45px; padding-left: 50px;">Nivetha</h1>
+      <p style="font-size: 30px; padding-top: 30px; margin-left: -50px;"><span style="font-size: 30px; color: black; font-weight: bold; padding-top: 10px;"> B.E(ECE) | Frontend Developer </span></p>
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <button class="trial-btn">Hire Me</button> 
+  </div>
+  </section>
+
+  <section id="aboutme" style="padding: 100px 20px; background: #fff3e0;">
+    <h2 style="text-align: center;">About Me Section</h2>
+    <div class="aboutme">
+    <!-- <u><h1 style="text-align: center; color: black; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> About Me</h1></u> -->
+    <p style="padding-top: 40px;">I’m Nivetha G,
+a dedicated student pursuing my Bachelor’s degree in Electronics and Communication Engineering (2023–2027).
+I study at a reputed college in Tamil Nadu.
+My interests lie at the intersection of electronics and web development.
+
+From a young age, I've been curious about how things work.
+That curiosity led me to explore both circuits and code.
+I enjoy building creative, user-friendly websites.
+I also love working with hardware components and embedded systems.
+
+I have experience in HTML, CSS, and basic JavaScript.
+Currently, I'm learning React and UI/UX design.
+I like turning complex ideas into simple, interactive designs.
+Whether it’s a personal project or a college assignment, I give it my best.
+
+I'm also interested in IoT, robotics, and system design.
+Apart from academics, I participate in tech events and workshops.
+I believe learning never stops and growth comes from real challenges.
+My goal is to create  solutions that make a difference.
+
+I'm always open to collaborating with like-minded peers.
+In everything I do, I aim for creativity, clarity, and impact.
+With hard work and passion, I hope to shape a meaningful career.
+And most importantly — keep exploring, building, and learning every day.</p>
+</div>
+  </section>
+
+  <section id="education" style="padding: 100px 20px; background: #e8f5e9;">
+    <h2 style="text-align: center;">Education</h2>
+    <div class="education-container">
+    <!-- <h2><i class="fas fa-graduation-cap"></i> Education</h2> -->
+
+    <div class="edu-item">
+      <i class="fas fa-university edu-icon"></i>
+      <div class="edu-content">
+        <h3>B.E. Electronics and Communication Engineering</h3>
+        <p class="edu-institute">Thanthai Periyar Govt Institute of Technology (2023-2027)</p>
+        
+        <p class="edu-desc">Pursuing a degree in Electronics And Communication Engineering. Focus areas include Embeded and IOT , VLSI , web development, front-end design, and full stackprojects using HTML< CSS, JavaScript, and Frameworks.</p>
+      </div>
+    </div>
+
+    <div class="edu-item">
+      <i class="fas fa-school edu-icon"></i>
+      <div class="edu-content">
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p class="edu-institute">Sengunthar Mahajana Higher Secondary School (2022-2023)</p>
+        
+        <p class="edu-desc">Completed HSC with a focus on Maths Biology and learned web course for Gained foundational knowledge in programming and logical reasoning.</p>
+
+      <button>Download Certificate</button>
+    </div>
+    </div>
+    <div class="edu-item">
+      <i class="fas fa-book-open edu-icon"></i>
+      <div class="edu-content">
+        <h3>Secondary School Leaving Certificate (SSLC)</h3>
+        <p class="edu-institute">Sengunthar Mahajana Girls High School  (2020-2021)</p>
+       
+        <p class="edu-desc">Completed SSLC with a strong academic record. Built the groundwork for future studies in technology.</p>
+     <button>Download Certificate</button>
+          </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="skills" style="padding: 100px 20px; background: #f3e5f5;">
+    <h2 style="text-align: center;">Skills</h2>
+    <div class="soft">
+      <h1 style="color: darkred; text-align: center;">Soft Skills</h1>
+      <div class="softhead">
+    <div class="softskill">
+      <img src="Images/1skill.jpg" style="height: 100px; width: 100px;"><h3 style="margin-left: -20px;">Communication</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/2skill.jpg" style="height: 100px; width: 100px;"><h3 style="margin-left: -20px;">Time Management</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/3skill.jpg" style="height: 100px; width: 100px;"><h3>Adaptability</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/4skill.jpg" style="height: 100px; width: 100px;"><h3>Team Work</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/5skill.jpg" style="height: 100px; width: 100px;"><h3>Leadership</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/6skill.jpg" style="height: 100px; width: 100px;"><h3 style="margin-left: 10px;">Curiosity</h3>
+    </div> 
+    </div>
+    </div>
+    <div class="soft">
+      <h1 style="color: darkred; text-align: center;">Hard Skills</h1>
+      <div class="softhead">
+    <div class="softskill">
+      <img src="Images/1hard.jpg" style="height: 100px; width: 100px; margin-left: 30px;"><h3>Software Development</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/2hard.jpg" style="height: 100px; width: 100px; margin-left: 15px;"><h3>Computer Skills</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/3hard.jpg" style="height: 100px; width: 100px; margin-left: 35px;"><h3>Programming Language</h3>
+      </div>
+    <div class="softskill">
+      <img src="Images/4hard.jpg" style="height: 100px; width: 100px; margin-left: 20px;"><h3>Cloud Computing</h3>
+    </div>
+    <div class="softskill">
+      <img src="Images/5hard.jpg" style="height: 100px; width: 100px;"><h3>Vedio Editing</h3>
+    </div>
+    <!-- <div class="softskill"> -->
+      <!-- <img src="Images/6hard.jpg" style="height: 100px; width: 100px;"> -->
+    <!-- </div> -->
+    </div>
+    </div>
+  </section>
+
+  <section id="Projects" style="padding: 100px 20px; background: #ede7f6;">
+    <h2 style="text-align: center;">Projects</h2>
+    <div class="live">
+      <!-- <h1 style="text-align: center;color:darkblue; font-weight: bold; margin-bottom: 50px;font-size: 30px;margin-top: 20px;">Projects</h1> -->
+    <div class="project">
+    <h2 style="margin-left:-30px; padding-top: 10px; color: darkred;">E-Commerce Store</h2>
+    <ul>
+      <li><h4>A full e-commerce website with a product page, cart system, and fibercase backend foe authentication.</h4></li>
+      <li><h4>Link: http://127.0.0.1:5500/shopmall.html</h4></li>
+    </ul>
+    <button>View project</button>
+    </div>
+     <div class="project">
+    <h2 style="margin-left: -30px; padding-top: 10px;color: darkred;">Mobile Showroom</h2>
+    <ul>
+      <li><h4>A modern product showcase website for displaying various iphone models with product images,specifiations, pricing,and contact form.</h4></li>
+      <li><h4>Link: http://127.0.0.1:5500/iphone.html</h4></li>
+    </ul>
+    <button>View Project</button>
+    </div>
+
+    <div class="project">
+    <h2 style="margin-left: -30px; padding-top: 10px;color: darkred;">Business page</h2>
+    <ul>
+      <li><h4>A clean, modern landing page for a tech startup.</h4></li>
+      <li><h4>Link: http://127.0.0.1:5500/business.html </h4></li>
+    </ul>
+    <button>View project</button>
+    </div>
+
+    <div class="project">
+    <h2 style="margin-left: -30px; padding-top: 10px;color: darkred;">Personal Care</h2>
+    <ul>
+      <li><h4>A elegant landing page for a personal care brand that offers organic skincare and self-care products.</h4></li>
+      <li><h4>Link: http://127.0.0.1:5500/personalcare.html</h4></li>
+    </ul>
+    <button>View project</button>
+    </div>
+  </div>
+  </section>
+
+  <section id="certificate" style="padding: 100px 20px; background: #fce4ec;">
+    <h2 style="text-align: center;">Achievements</h2>
+    <div class="container">
+    <!-- <h2 style="margin-left: 300px;margin-top: 20px; margin-bottom: 30px; font-size: 40px; color:crimson;">Achievements</h2> -->
+    <ul class="achievement-list">
+      <li>🏆 Best Player in<strong> Ball Badminton</strong></li>
+      <button>View Certificate</button>
+      <li>🏅 Completed <strong> Frontend Development</strong> course @infeara(2025)</li>
+      <button>View Certificate</button>
+      <li>🎓 Awarded<strong> TN wise Project</strong> in College Level</li>
+      <button>View Certificate</button>
+      <li>💼 Internship at <strong> Infeara</strong> (Built a responsive portfolio site)</li>
+      <button>View Certificate</button>
+      <li>📚 Solved <strong> Problem Solutions</strong> in intercollege meet</li>
+      <button>View Certificate</button>
+    </ul>
+  </div>
+  </section>
+
+  <section id="My Creations" style="padding: 100px 20px; background: #fffde7;">
+    <h2 style="text-align: center;">My Creations</h2>
+    <div class="mycreation">
+  <!-- <h1 style="text-align: center; margin-top: 20px; margin-bottom: 50px;font-size: 40px;">My Creations</h1> -->
+  <div class="creation">
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (37).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (38).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (40).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (43).png" style="height: 180px; width: 200px;">
+  </div>
+  </div>
+
+  <div class="creation">
+  
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (46).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (69).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (70).png" style="height: 180px; width: 200px;">
+  </div>
+  <div class="gallery">
+    <img src="Images/New folder/Screenshot (80).png" style="height: 180px; width: 200px;">
+  </div>
+  </div>
+</div>
+  </section>
+
+  <section id="contact" style="padding: 100px 20px; background: #e1f5fe;">
+    <h2 style="text-align: center;">Contact</h2>
+    <div class="contact-container">
+    <!-- <h2 style="color: mediumvioletred;">Contact Me</h2> -->
+    <h3>If you would like to work together or just say hello, feel free to drop a message..!</h3>
+    
+    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    
+    <div class="contact-socials">
+    
+      <a href="https://wa.me/"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a></a>
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="tel:+918248844515">Call</a>
+    </div>
+  </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
